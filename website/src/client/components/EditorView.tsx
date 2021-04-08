@@ -40,6 +40,7 @@ import KeybindingsManager from './shared/KeybindingsManager';
 import LazyLoad from './shared/LazyLoad';
 import ModalDialog from './shared/ModalDialog';
 import ProgressIndicator from './shared/ProgressIndicator';
+import DocsPanel from './Docs/DocsPanel';
 
 const EDITOR_LOAD_FALLBACK_TIMEOUT = 3000;
 
@@ -460,6 +461,7 @@ class EditorView extends React.Component<Props, State> {
                   createdAt={createdAt}
                   saveHistory={saveHistory}
                   saveStatus={saveStatus}
+                  sdkVersion={sdkVersion}
                   viewer={viewer}
                   isDownloading={isDownloading}
                   isResolving={isResolving}
@@ -628,6 +630,7 @@ class EditorView extends React.Component<Props, State> {
                       />
                     ) : null}
                   </div>
+                  <DocsPanel />
                   {previewShown ? (
                     <DevicePreview
                       className={css(styles.preview)}

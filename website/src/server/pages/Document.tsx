@@ -64,6 +64,7 @@ export default function Document(props: Props) {
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,500,600"
         />
         <link rel="stylesheet" href={resources.normalize} />
+        <link rel="stylesheet" href={resources.algolia} />
 
         <style
           type="text/css"
